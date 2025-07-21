@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/sslab/sim_ws/devel/.private/cage/setup.sh

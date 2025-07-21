@@ -1,0 +1,8 @@
+prefix=/home/sslab/sim_ws/install
+
+Name: cage
+Description: Description of cage
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

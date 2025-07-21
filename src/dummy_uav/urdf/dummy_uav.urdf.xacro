@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="dummy_uav">
+
+
+  <!-- Add odom frame to support gazebo_ros_p3d plugin -->
+  <!-- <link name="odom"/>
+  <joint name="odom_to_base" type="fixed">
+    <parent link="odom"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint> -->
+  <!-- Main body -->
+  <link name="base_link">
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" iyy="0.01" izz="0.02" ixy="0" ixz="0" iyz="0"/>
+    </inertial>
+
+    <visual>
+      <geometry><box size="0.3 0.3 0.1"/></geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="Blue"><color rgba="0 0 1 1"/></material>
+    </visual>
+
+    <collision>
+      <geometry><box size="0.3 0.3 0.1"/></geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <!-- Headlight Link -->
+  <link name="headlight_link">
+    <inertial>
+      <mass value="0.01" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="1e-6" iyy="1e-6" izz="1e-6" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+    
+    <!-- <visual>
+      <geometry><sphere radius="0.02"/></geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="White"><color rgba="1 1 1 1"/></material>
+    </visual> -->
+  </link>
+
+  <joint name="headlight_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="headlight_link"/>
+    <origin xyz="0.15 0 0.02" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Headlight Gazebo Plugin -->
+  <gazebo reference="headlight_link">
+    <light type="spot" name="headlight">
+      <pose>0 0 0 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>1 1 1 1</specular>
+      <direction>1 0 0</direction>
+      <attenuation>
+        <range>50</range>
+        <linear>0.01</linear>
+        <constant>0.1</constant>
+        <quadratic>0.0</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>1.2</inner_angle>
+        <outer_angle>2.0</outer_angle>
+        <falloff>1.0</falloff>
+      </spot>
+      <cast_shadows>true</cast_shadows>
+    </light>
+    <material>Gazebo/White</material>
+  </gazebo>
+
+
+  <!-- IMU Link -->
+  <link name="imu_link">
+    <inertial>
+      <mass value="0.001" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <inertia ixx="1e-6" iyy="1e-6" izz="1e-6" ixy="0" ixz="0" iyz="0" />
+    </inertial>
+  </link>
+
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0.05" rpy="0 0 0"/>
+  </joint>
+
+
+  <gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>400</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu/data</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>400.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+
+  <!-- Camera Sensor -->
+  <gazebo reference="base_link">
+    <sensor name="camera_sensor" type="camera">
+      <always_on>true</always_on>
+      <update_rate>25</update_rate>
+      <visualize>true</visualize>
+      <camera>
+        <horizontal_fov>1.39626</horizontal_fov> <!-- ~80 deg -->
+        <image>
+          <width>1280</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>500</far>
+        </clip>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <cameraName>front_camera</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>base_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="base_link">
+    <gravity>false</gravity>
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+</robot>

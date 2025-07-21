@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/sslab/sim_ws/devel/.private/dummy_uav/setup.sh

@@ -1,0 +1,3 @@
+Symlinking /home/sslab/sim_ws/devel/share/dummy_uav/cmake/dummy_uavConfig-version.cmake
+Symlinking /home/sslab/sim_ws/devel/share/dummy_uav/cmake/dummy_uavConfig.cmake
+Symlinking /home/sslab/sim_ws/devel/lib/pkgconfig/dummy_uav.pc

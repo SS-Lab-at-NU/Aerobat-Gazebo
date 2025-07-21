@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="cage">
+    <static>true</static>
+    <link name="cage_link">
+      <visual name="cage_visual">
+        <geometry>
+          <mesh>
+            <uri>model://cage/meshes/Cage.obj</uri>
+            <!-- Optional: Uncomment and adjust if your mesh is too large/small -->
+            <scale>2 2 2</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="cage_collision">
+        <geometry>
+          <mesh>
+            <uri>model://cage/meshes/Cage.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

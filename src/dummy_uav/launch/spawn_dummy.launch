@@ -1,0 +1,60 @@
+<!-- <launch>
+  <param name="use_sim_time" value="true" />
+
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0"/>
+
+  <param name="robot_description" command="$(find xacro)/xacro $(find dummy_uav)/urdf/dummy_uav.urdf.xacro"/>
+
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description -urdf -model dummy_uav -x $(arg x) -y $(arg y) -z $(arg z)"
+        output="screen"/>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="rsp" output="screen"/>
+  <node name="move_robot" pkg="dummy_uav" type="cmd_vel_to_pose.py" output="screen"/>
+
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen"
+        args="cmd_vel:=/cmd_vel"/>
+</launch>
+ -->
+
+<launch>
+  <param name="use_sim_time" value="true" />
+
+  <arg name="x" default="0"/>
+  <arg name="y" default="2"/>
+  <arg name="z" default="2"/>
+  <arg name="oscillate" default="true"/>
+  <arg name="amplitude" default="0.8"/>
+  <arg name="frequency" default="1.5"/>
+  <arg name="hover_height" default="2.0"/>
+  <!-- <arg name="kill_existing" default="true"/> -->
+
+
+  <!-- <node if="$(arg kill_existing)" name="kill_existing_model" pkg="gazebo_ros" type="spawn_model"
+        args="-delete -model dummy_uav" output="screen"/> -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find dummy_uav)/urdf/dummy_uav.urdf.xacro"/>
+
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description -urdf -model dummy_uav -x $(arg x) -y $(arg y) -z $(arg z)"
+        output="screen"/>
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="rsp" output="screen"/>
+  
+  <!-- Oscillation controller with hovering capability -->
+  <node if="$(arg oscillate)" name="hover_oscillate" pkg="dummy_uav" type="hover_oscillate.py" output="screen">
+    <param name="amplitude" value="$(arg amplitude)"/>
+    <param name="frequency" value="$(arg frequency)"/>
+    <param name="hover_height" value="$(arg hover_height)"/>
+    <param name="model_name" value="dummy_uav"/>
+    <param name="noise_amplitude" value="0.1"/>
+  </node>
+  
+  <!-- Manual control when not oscillating -->
+  <group unless="$(arg oscillate)">
+    <node name="move_robot" pkg="dummy_uav" type="cmd_vel_to_pose.py" output="screen"/>
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen"
+          args="cmd_vel:=/cmd_vel"/>
+  </group>
+</launch>
