@@ -1,8 +1,0 @@
-prefix=/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/devel/.private/dummy_uav
-
-Name: dummy_uav
-Description: Description of dummy_uav
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

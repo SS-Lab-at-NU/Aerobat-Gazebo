@@ -1,8 +1,0 @@
-prefix=/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/devel/.private/cage
-
-Name: cage
-Description: Description of cage
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

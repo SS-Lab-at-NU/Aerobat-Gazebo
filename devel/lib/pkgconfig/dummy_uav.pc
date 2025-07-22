@@ -1,1 +1,0 @@
-/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/devel/.private/dummy_uav/lib/pkgconfig/dummy_uav.pc
