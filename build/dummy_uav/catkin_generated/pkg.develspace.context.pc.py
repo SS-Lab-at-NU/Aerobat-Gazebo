@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "dummy_uav"
-PROJECT_SPACE_DIR = "/home/sslab/sim_ws/devel/.private/dummy_uav"
+PROJECT_SPACE_DIR = "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/devel/.private/dummy_uav"
 PROJECT_VERSION = "0.0.0"

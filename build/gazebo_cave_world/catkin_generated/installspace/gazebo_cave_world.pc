@@ -1,8 +1,0 @@
-prefix=/home/sslab/sim_ws/install
-
-Name: gazebo_cave_world
-Description: Description of gazebo_cave_world
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

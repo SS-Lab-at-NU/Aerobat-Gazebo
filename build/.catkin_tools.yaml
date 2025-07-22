@@ -1,6 +1,6 @@
-devel_space: /home/sslab/sim_ws/devel
+devel_space: /Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/devel
 install: false
-install_space: /home/sslab/sim_ws/install
+install_space: /Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install
 profile: default
-source_space: /home/sslab/sim_ws/src
-workspace: /home/sslab/sim_ws
+source_space: /Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/src
+workspace: /Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo

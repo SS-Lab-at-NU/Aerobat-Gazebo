@@ -11,13 +11,29 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/home/sslab/sim_ws/install}
+# _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
+
+if [ ! -z "$ZSH_VERSION" ]; then
+  CATKIN_SHELL=zsh
+elif [ ! -z "$BASH_VERSION" ]; then
+  CATKIN_SHELL=bash
+else
+  CATKIN_SHELL=sh
+fi
+
+: ${_CATKIN_SETUP_DIR:=/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install}
+: ${_CONDA_SETUP_DIR:=$CONDA_PREFIX/etc/conda/activate.d/}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
+
 unset _CATKIN_SETUP_DIR
 
 if [ ! -f "$_SETUP_UTIL" ]; then
-  echo "Missing Python script: $_SETUP_UTIL"
-  return 22
+  _SETUP_UTIL="$_CONDA_SETUP_DIR/ros_setup_util.py"
+
+  if [ ! -f "$_SETUP_UTIL" ]; then
+    echo "Missing Python script: $_SETUP_UTIL"
+    return 22
+  fi
 fi
 
 # detect if running on Darwin platform
@@ -62,7 +78,7 @@ CATKIN_SHELL=$CATKIN_SHELL "$_SETUP_UTIL" $@ ${CATKIN_SETUP_UTIL_ARGS:-} >> "$_S
 _RC=$?
 if [ $_RC -ne 0 ]; then
   if [ $_RC -eq 2 ]; then
-    echo "Could not write the output of '$_SETUP_UTIL' to temporary file '$_SETUP_TMP': maybe the disk is full?"
+    echo "Could not write the output of '$_SETUP_UTIL' to temporary file '$_SETUP_TMP': may be the disk if full?"
   else
     echo "Failed to run '\"$_SETUP_UTIL\" $@': return code $_RC"
   fi

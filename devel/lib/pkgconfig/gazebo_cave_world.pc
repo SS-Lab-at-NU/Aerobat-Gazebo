@@ -1,1 +1,0 @@
-/home/sslab/sim_ws/devel/.private/gazebo_cave_world/lib/pkgconfig/gazebo_cave_world.pc

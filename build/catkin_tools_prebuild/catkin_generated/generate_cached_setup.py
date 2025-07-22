@@ -6,22 +6,22 @@ import stat
 import sys
 
 # find the import for catkin's python package - either from source space or from an installed underlay
-if os.path.exists(os.path.join('/opt/ros/noetic/share/catkin/cmake', 'catkinConfig.cmake.in')):
-    sys.path.insert(0, os.path.join('/opt/ros/noetic/share/catkin/cmake', '..', 'python'))
+if os.path.exists(os.path.join('/Users/mostafalotfy/anaconda3/envs/ROS/share/catkin/cmake', 'catkinConfig.cmake.in')):
+    sys.path.insert(0, os.path.join('/Users/mostafalotfy/anaconda3/envs/ROS/share/catkin/cmake', '..', 'python'))
 try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in '/home/sslab/Aerobat-ROS/devel;/opt/ros/noetic'.split(';'):
-        python_path = os.path.join(workspace, 'lib/python3/dist-packages')
+    for workspace in '/Users/mostafalotfy/anaconda3/envs/ROS'.split(';'):
+        python_path = os.path.join(workspace, 'lib/python3.9/site-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/home/sslab/sim_ws/devel/.private/catkin_tools_prebuild/env.sh')
+code = generate_environment_script('/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/devel/.private/catkin_tools_prebuild/env.sh')
 
-output_filename = '/home/sslab/sim_ws/build/catkin_tools_prebuild/catkin_generated/setup_cached.sh'
+output_filename = '/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/catkin_tools_prebuild/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:
     # print('Generate script for cached setup "%s"' % output_filename)
     f.write('\n'.join(code))

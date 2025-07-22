@@ -1,8 +1,8 @@
-# Install script for directory: /home/sslab/sim_ws/src/dummy_uav
+# Install script for directory: /Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/src/dummy_uav
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sslab/sim_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,17 +27,17 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
-endif()
-
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/objdump")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   
       if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
         file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
@@ -47,106 +47,100 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/sslab/sim_ws/install/_setup_util.py")
+   "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/sslab/sim_ws/install" TYPE PROGRAM FILES "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/_setup_util.py")
+  file(INSTALL DESTINATION "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install" TYPE PROGRAM FILES "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/_setup_util.py")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/sslab/sim_ws/install/env.sh")
+   "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/sslab/sim_ws/install" TYPE PROGRAM FILES "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/env.sh")
+  file(INSTALL DESTINATION "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install" TYPE PROGRAM FILES "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/env.sh")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/sslab/sim_ws/install/setup.bash;/home/sslab/sim_ws/install/local_setup.bash")
+   "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/setup.bash;/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/sslab/sim_ws/install" TYPE FILE FILES
-    "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/setup.bash"
-    "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/local_setup.bash"
+  file(INSTALL DESTINATION "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install" TYPE FILE FILES
+    "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/setup.bash"
+    "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/sslab/sim_ws/install/setup.sh;/home/sslab/sim_ws/install/local_setup.sh")
+   "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/setup.sh;/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/sslab/sim_ws/install" TYPE FILE FILES
-    "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/setup.sh"
-    "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/local_setup.sh"
+  file(INSTALL DESTINATION "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install" TYPE FILE FILES
+    "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/setup.sh"
+    "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/sslab/sim_ws/install/setup.zsh;/home/sslab/sim_ws/install/local_setup.zsh")
+   "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/setup.zsh;/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/sslab/sim_ws/install" TYPE FILE FILES
-    "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/setup.zsh"
-    "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/local_setup.zsh"
+  file(INSTALL DESTINATION "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install" TYPE FILE FILES
+    "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/setup.zsh"
+    "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/sslab/sim_ws/install/.rosinstall")
+   "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/sslab/sim_ws/install" TYPE FILE FILES "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/.rosinstall")
+  file(INSTALL DESTINATION "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install" TYPE FILE FILES "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/.rosinstall")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/dummy_uav.pc")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/dummy_uav.pc")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dummy_uav/cmake" TYPE FILE FILES
-    "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/dummy_uavConfig.cmake"
-    "/home/sslab/sim_ws/build/dummy_uav/catkin_generated/installspace/dummy_uavConfig-version.cmake"
+    "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/dummy_uavConfig.cmake"
+    "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/catkin_generated/installspace/dummy_uavConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dummy_uav" TYPE FILE FILES "/home/sslab/sim_ws/src/dummy_uav/package.xml")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/sslab/sim_ws/build/dummy_uav/gtest/cmake_install.cmake")
-
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/dummy_uav" TYPE FILE FILES "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/src/dummy_uav/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -157,5 +151,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sslab/sim_ws/build/dummy_uav/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/build/dummy_uav/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

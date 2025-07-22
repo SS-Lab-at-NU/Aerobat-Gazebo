@@ -1,1 +1,1 @@
-/home/sslab/sim_ws/devel/.private/catkin_tools_prebuild/local_setup.sh
+/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/devel/.private/catkin_tools_prebuild/local_setup.sh

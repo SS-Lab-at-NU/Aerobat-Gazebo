@@ -1,4 +1,4 @@
-prefix=/home/sslab/sim_ws/install
+prefix=/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install
 
 Name: dummy_uav
 Description: Description of dummy_uav

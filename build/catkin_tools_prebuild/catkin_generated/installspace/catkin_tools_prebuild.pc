@@ -1,4 +1,4 @@
-prefix=/home/sslab/sim_ws/install
+prefix=/Users/mostafalotfy/Documents/University/Master/SSLab/Aerobat-Gazebo/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild
