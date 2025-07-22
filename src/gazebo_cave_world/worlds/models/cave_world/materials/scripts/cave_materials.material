@@ -1,0 +1,201 @@
+// Replace all material names to match MTL file exactly
+
+material cave_tile_start:Cave_Ground
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.6 0.5 0.4 1.0
+            diffuse 0.8 0.7 0.6 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture StriatedRock_Albedo.png
+                scale 0.1 0.1
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_start:Cave_Walls
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.5 0.4 0.3 1.0
+            diffuse 0.7 0.6 0.5 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture CaveWall_Albedo.png
+                scale 0.08 0.08
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_2:Cave_Ground
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.6 0.5 0.4 1.0
+            diffuse 0.8 0.7 0.6 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture StriatedRock_Albedo.png
+                scale 0.1 0.1
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_2:Cave_Walls
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.5 0.4 0.3 1.0
+            diffuse 0.7 0.6 0.5 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture CaveWall_Albedo.png
+                scale 0.08 0.08
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_3:Cave_Ground
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.6 0.5 0.4 1.0
+            diffuse 0.8 0.7 0.6 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture StriatedRock_Albedo.png
+                scale 0.1 0.1
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_3:Cave_Walls
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.5 0.4 0.3 1.0
+            diffuse 0.7 0.6 0.5 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture CaveWall_Albedo.png
+                scale 0.08 0.08
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_5:Cave_Ground
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.6 0.5 0.4 1.0
+            diffuse 0.8 0.7 0.6 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture StriatedRock_Albedo.png
+                scale 0.1 0.1
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_5:Cave_Walls
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.5 0.4 0.3 1.0
+            diffuse 0.7 0.6 0.5 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture CaveWall_Albedo.png
+                scale 0.08 0.08
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_7:Cave_Ground
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.6 0.5 0.4 1.0
+            diffuse 0.8 0.7 0.6 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture StriatedRock_Albedo.png
+                scale 0.1 0.1
+                filtering trilinear
+            }
+        }
+    }
+}
+
+material cave_tile_7:Cave_Walls
+{
+    technique
+    {
+        pass
+        {
+            ambient 0.5 0.4 0.3 1.0
+            diffuse 0.7 0.6 0.5 1.0
+            specular 0.1 0.1 0.1 1.0
+            
+            texture_unit
+            {
+                texture CaveWall_Albedo.png
+                scale 0.08 0.08
+                filtering trilinear
+            }
+        }
+    }
+}

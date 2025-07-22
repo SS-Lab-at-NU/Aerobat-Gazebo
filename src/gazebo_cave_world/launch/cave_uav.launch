@@ -1,0 +1,13 @@
+<launch>
+  <!-- Start the cave world -->
+  <include file="$(find gazebo_cave_world)/launch/cave_world.launch"/>
+
+  <!-- Spawn dummy robot -->
+  <include file="$(find dummy_uav)/launch/spawn_dummy.launch"/>
+
+  <!-- Optionally: keyboard control -->
+  <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen"
+        args="cmd_vel:=/cmd_vel"/>
+
+  <!-- Add motion node later -->
+</launch>
