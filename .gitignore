@@ -1,0 +1,14 @@
+# Ignore ROS/CMake build artifacts
+build/
+devel/
+install/
+logs/
+.catkin_tools/
+
+# Optional: IDE-specific folders
+.vscode/
+.idea/
+
+# Optional: MacOS junk files
+.DS_Store
+
