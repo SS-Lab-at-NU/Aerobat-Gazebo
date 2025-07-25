@@ -11,11 +11,11 @@
         args="-param robot_description -urdf -model dummy_uav -x $(arg x) -y $(arg y) -z $(arg z)"
         output="screen"/>
 
-  <node pkg="robot_state_publisher" type="robot_state_publisher" name="rsp" output="screen"/>
+  <!-- <node pkg="robot_state_publisher" type="robot_state_publisher" name="rsp" output="screen"/>
   <node name="move_robot" pkg="dummy_uav" type="cmd_vel_to_pose.py" output="screen"/>
 
   <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen"
-        args="cmd_vel:=/cmd_vel"/>
+        args="cmd_vel:=/cmd_vel"/> -->
 </launch>
 
 

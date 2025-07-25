@@ -140,7 +140,7 @@
   </gazebo>
 
   <gazebo reference="base_link">
-    <gravity>false</gravity>
+    <gravity>true</gravity>
     <material>Gazebo/Blue</material>
   </gazebo>
 
